@@ -33,7 +33,7 @@ export const AuthorTable = props => {
                             <TableRow key={index}>
                                 <TableCell>{item.name}</TableCell>
                                 <TableCell>
-                                    <Button variant='contained'>Edit</Button>
+                                    <Button variant='contained' onClick={e => nav('/edit/' + item._id)}>Edit</Button>
                                     <Button color='error' variant='contained' onClick={() => processDelete(item._id)}>Delete</Button>
                                 </TableCell>
                             </TableRow>
