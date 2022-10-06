@@ -15,7 +15,7 @@ module.exports.getOneAuthor = (request, response) => {
 module.exports.createAuthor = (request, response) => {
     Author.create(request.body)
         .then(newAuthor => response.json(newAuthor))
-        .catch(error => response.json(error))
+        .catch(error => response.status(400).json(error))
 }
 
 module.exports.updateAuthor = (request, response) => {
